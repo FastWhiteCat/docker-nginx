@@ -7,4 +7,4 @@ ADD conf.d/ /etc/nginx/conf.d/
 ADD start.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/start.sh
 
-CMD start.sh
+CMD ["usr/local/bin/start.sh"]
