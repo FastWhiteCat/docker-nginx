@@ -1,4 +1,10 @@
 FROM nginx:1.10.1
 
-COPY nginx-magento.conf /etc/nginx/
-COPY default.conf /etc/nginx/conf.d/
+EXPOSE 80
+
+ADD conf.d/ /etc/nginx/conf.d/
+
+ADD start.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/start.sh
+
+CMD start.sh
