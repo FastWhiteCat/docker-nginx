@@ -21,6 +21,4 @@ sed -i 's=__server_port__='"$SERVER_PORT"'=g' /etc/nginx/conf.d/default.conf
 sed -i 's=__mage_mode__='"$MAGE_MODE"'=g' /etc/nginx/conf.d/default.conf
 sed -i 's=__mage_root__='"$MAGE_ROOT"'=g' /etc/nginx/conf.d/default.conf
 
-cat /etc/nginx/conf.d/default.conf
-
-nginx
+nginx -g 'daemon off;'
