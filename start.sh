@@ -9,7 +9,7 @@ if [ -z "$SERVER_PORT" ]; then
 fi
 
 if [ -z "$MAGE_MODE" ]; then
-    MAGE_MODE="developer"
+    MAGE_MODE="production"
 fi
 
 if [ -z "$MAGE_ROOT" ]; then
