@@ -16,6 +16,8 @@ EXPOSE 80
 
 ADD conf.d/ /etc/nginx/conf.d/
 
+ADD 502.html /var/www/502.html
+
 ADD start.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/start.sh
 
