@@ -16,9 +16,14 @@ if [ -z "$MAGE_ROOT" ]; then
     MAGE_ROOT="/var/www/html"
 fi
 
+if [ -z "$ALLOW_ORIGIN" ]; then
+    ALLOW_ORIGIN="*"
+fi
+
 sed -i 's=__server_app__='"$SERVER_APP"'=g' /etc/nginx/conf.d/default.conf
 sed -i 's=__server_port__='"$SERVER_PORT"'=g' /etc/nginx/conf.d/default.conf
 sed -i 's=__mage_mode__='"$MAGE_MODE"'=g' /etc/nginx/conf.d/default.conf
 sed -i 's=__mage_root__='"$MAGE_ROOT"'=g' /etc/nginx/conf.d/default.conf
+sed -i 's=__allow_origin__='"$ALLOW_ORIGIN"'=g' /etc/nginx/conf.d/default.conf
 
 nginx -g 'daemon off;'
