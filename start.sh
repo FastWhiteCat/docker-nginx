@@ -20,7 +20,7 @@ if [ -z "$ALLOW_ORIGIN" ]; then
     ALLOW_ORIGIN="*"
 fi
 
-if [ -z "$PROTOCOL"]; then 
+if [ -z "$PROTOCOL" ]; then 
     if [ "$MAGE_MODE" = "production" ]; then
         PROTOCOL="HTTPS";
     else 
