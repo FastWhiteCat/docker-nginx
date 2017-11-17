@@ -14,6 +14,7 @@ RUN apt-get update && \
 
 EXPOSE 80
 
+ADD nginx.conf /etc/nginx/nginx.conf
 ADD conf.d/ /etc/nginx/conf.d/
 
 ADD 502.html /var/www/502.html
