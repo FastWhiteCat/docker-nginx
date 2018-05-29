@@ -1,4 +1,4 @@
-FROM nginx:1.10.1
+FROM nginx:1.13.12-alpine
 
 RUN apt-get update && \
     apt-get install -y \
