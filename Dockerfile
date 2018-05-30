@@ -1,5 +1,7 @@
 FROM nginx:1.13.12-alpine
 
+RUN apk add --update bash
+
 EXPOSE 80
 
 ADD nginx.conf /etc/nginx/nginx.conf
