@@ -1,17 +1,5 @@
 FROM nginx:1.13.12-alpine
 
-RUN apt-get update && \
-    apt-get install -y \
-    curl
-
-#RUN curl 'https://bintray.com/user/downloadSubjectPublicKey?username=bintray' | apt-key add -
-#RUN echo "deb http://dl.bintray.com/donbeave/deb wheezy main" >> /etc/apt/sources.list
-
-#RUN apt-get update && \
-#    apt-get install -y \
-#    ca-certificates nginx-pagespeed && \
-#    rm -rf /var/lib/apt/lists/*
-
 EXPOSE 80
 
 ADD nginx.conf /etc/nginx/nginx.conf
