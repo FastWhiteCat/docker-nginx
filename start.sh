@@ -48,6 +48,8 @@ sed -i 's=__allow_origin__='"$ALLOW_ORIGIN"'=g' /etc/nginx/conf.d/default.conf
 sed -i 's=__client_max_body_size__='"$CLIENT_MAX_BODY_SIZE"'=g' /etc/nginx/conf.d/default.conf
 sed -i 's=__protocol__='"$PROTOCOL"'=g' /etc/nginx/conf.d/default.conf
 
+sed -i 's=__nginx_keepalive_timeout__='"$NGINX_KEEPALIVE_TIMEOUT"'=g' /etc/nginx/nginx.conf
 sed -i 's=__nginx_worker_connections__='"$NGINX_WORKER_CONNECTIONS"'=g' /etc/nginx/nginx.conf
+
 
 nginx -g 'daemon off;'
