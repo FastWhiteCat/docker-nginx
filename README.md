@@ -32,6 +32,24 @@ docker run -Pit --name=nginx \
         -e NGINX_WORKER_CONNECTIONS="1024" fastwhitecat/nginx
 ```
 
+### List of env
+
+|env|default|
+|---|:--:|
+|SERVER_APP|`app`|
+|SERVER_PORT|`9000`|
+|MAGE_MODE|`production`|
+|MAGE_ROOT|`/var/www/html`|
+|ALLOW_ORIGIN|`*`|
+|CLIENT_MAX_BODY_SIZE|`10M`|
+|FASTCGI_BUFFER_SIZE|`32k`|
+|FASTCGI_BUFFERS_NUMBER|`16`|
+|FASTCGI_BUFFERS_SIZE|`16k`|
+|NGINX_KEEPALIVE_TIMEOUT|`65`|
+|NGINX_WORKER_CONNECTIONS|`1024`|
+|PHP_MEMORY_LIMIT|`768M`|
+|PHP_EXECUTION_TIMEOUT|`600s`|
+
 Build:
 
 ```bash
