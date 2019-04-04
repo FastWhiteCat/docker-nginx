@@ -1,15 +1,15 @@
 #!/bin/bash
 
-[ -z "$SERVER_APP" ] && export=SERVER_APP="app"
-[ -z "$SERVER_PORT" ] && export=SERVER_PORT="9000"
-[ -z "$MAGE_MODE" ] && export=MAGE_MODE="production"
-[ -z "$MAGE_ROOT" ] && export=MAGE_ROOT="/var/www/html"
-[ -z "$ALLOW_ORIGIN" ] && export=ALLOW_ORIGIN="*"
-[ -z "$CLIENT_MAX_BODY_SIZE" ] && export=CLIENT_MAX_BODY_SIZE="10M"
+[ -z "$SERVER_APP" ] && export SERVER_APP="app"
+[ -z "$SERVER_PORT" ] && export SERVER_PORT="9000"
+[ -z "$MAGE_MODE" ] && export MAGE_MODE="production"
+[ -z "$MAGE_ROOT" ] && export MAGE_ROOT="/var/www/html"
+[ -z "$ALLOW_ORIGIN" ] && export ALLOW_ORIGIN="*"
+[ -z "$CLIENT_MAX_BODY_SIZE" ] && export CLIENT_MAX_BODY_SIZE="10M"
 
-[ -z "$FASTCGI_BUFFER_SIZE" ] && export=FASTCGI_BUFFER_SIZE="32k"
-[ -z "$FASTCGI_BUFFERS_NUMBER" ] && export=FASTCGI_BUFFERS_NUMBER="16"
-[ -z "$FASTCGI_BUFFERS_SIZE" ] && export=FASTCGI_BUFFERS_SIZE="16k"
+[ -z "$FASTCGI_BUFFER_SIZE" ] && export FASTCGI_BUFFER_SIZE="32k"
+[ -z "$FASTCGI_BUFFERS_NUMBER" ] && export FASTCGI_BUFFERS_NUMBER="16"
+[ -z "$FASTCGI_BUFFERS_SIZE" ] && export FASTCGI_BUFFERS_SIZE="16k"
 
 if [ -z "$PROTOCOL" ]; then
     if [ "$MAGE_MODE" = "production" ]; then
@@ -19,11 +19,11 @@ if [ -z "$PROTOCOL" ]; then
     fi
 fi
 
-[ -z "$NGINX_KEEPALIVE_TIMEOUT" ] && export=NGINX_KEEPALIVE_TIMEOUT="65"
-[ -z "$NGINX_WORKER_CONNECTIONS" ] && export=NGINX_WORKER_CONNECTIONS="1024"
+[ -z "$NGINX_KEEPALIVE_TIMEOUT" ] && export NGINX_KEEPALIVE_TIMEOUT="65"
+[ -z "$NGINX_WORKER_CONNECTIONS" ] && export NGINX_WORKER_CONNECTIONS="1024"
 
-[ -z "$PHP_MEMORY_LIMIT" ] && export=PHP_MEMORY_LIMIT="768M"
-[ -z "$PHP_EXECUTION_TIMEOUT" ] && export=PHP_EXECUTION_TIMEOUT="600s"
+[ -z "$PHP_MEMORY_LIMIT" ] && export PHP_MEMORY_LIMIT="768M"
+[ -z "$PHP_EXECUTION_TIMEOUT" ] && export PHP_EXECUTION_TIMEOUT="600s"
 
 
 
